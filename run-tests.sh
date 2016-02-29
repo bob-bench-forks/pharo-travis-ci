@@ -25,11 +25,10 @@ fi
 wget --quiet -O - get.pharo.org/$pharo_version+vm | bash
 # install project
 ./pharo Pharo.image eval --save "
-[ Metacello new 
+Metacello new 
 	baseline: '$baseline';
 	repository: 'filetree://$packages_dir';
-	load ]
-on: Warning do: [ :w | w resume: true ].
+	load.
 "
 # execute tests
 ./pharo Pharo.image test --no-xterm --fail-on-failure "$tests" 2>&1
