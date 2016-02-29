@@ -1,7 +1,8 @@
-A simplified version to use Pharo and Travis
+A simplified version to use [Pharo](http://pharo.org) and Travis CI
 ======
 
-This is a simple script that will do what you want in a simple :)
+This is a simple script that will do what you want in a simple way (it simplifies the use of smalltalk-ci for those 
+who do not need a multi-smalltalk matrix) :)
 
 
 You will need to define a `.travis.yml` in your project:
@@ -31,7 +32,7 @@ env:
     # OPTIONAL. Defines which tests to run (default is "YourBaseline.*")
     - tests="YourBaseline.*"
   matrix: 
-    # OPTIONAL. It determines the pharo version (same as zeroconf)
+    # OPTIONAL. It determines the pharo version, same as [zeroconf](http://get.pharo.org) (default is "stable")
     - pharo_version="stable"
     - pharo_version="alpha" 		
     - pharo_version="50"
