@@ -21,14 +21,20 @@ addons:
 before_script: 
   - git clone --depth=1 https://github.com/estebanlm/pharo-travis-ci.git
 script:
-  - run-tests.sh
-env:
-  # MANDATORY. It will tell the script which baseline needs to load. 
-  - baseline="YourBaseline"
-  # OPTIONAL. It determines the pharo version. Values can be: "50", "40", "30", "stable", "latest" (defaults to "stable")
-  - pharo_version="50" 		
-  # OPTIONAL. It indicates where to find baseline (default is "mc")
-  - package_dir="mc"
-  # OPTIONAL. Defines which tests to run (default is "YourBaseline.*")
-  - tests="YourBaseline.*"
+  - pharo-travis-ci/run-tests.sh
+env: 
+  global: 
+    # MANDATORY. It will tell the script which baseline needs to load.
+    - baseline="YourBaseline"
+    # OPTIONAL. It indicates where to find baseline (default is "mc")
+    - package_dir="mc"
+    # OPTIONAL. Defines which tests to run (default is "YourBaseline.*")
+    - tests="YourBaseline.*"
+  matrix: 
+    # OPTIONAL. It determines the pharo version (same as zeroconf)
+    - pharo_version="stable"
+    - pharo_version="alpha" 		
+    - pharo_version="50"
+    - pharo_version="40"
+    - pharo_version="30"
 ```

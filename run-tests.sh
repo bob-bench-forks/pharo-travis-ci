@@ -7,17 +7,17 @@ default_packages_dir="mc"
 default_tests="$baseline.*"
 
 # add a default version ()
-if [ -z $pharo_version ]; then
+if [ -z "$pharo_version" ]; then
 	pharo_version="$default_pharo_version"
 fi
 
 # add a default repository
-if [ -z $packages_dir ]; then
+if [ -z "$packages_dir" ]; then
 	packages_dir="$default_packages_dir"
 fi
 
 # add a default tests
-if [ -z $tests ]; then
+if [ -z "$tests" ]; then
 	tests="$default_tests"
 fi
 
