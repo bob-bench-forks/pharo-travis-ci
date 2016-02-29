@@ -1,0 +1,25 @@
+language: c
+os:
+  - linux
+  - osx
+addons:
+  apt:
+    packages:
+      - lib32asound2
+      - lib32z1
+      - lib32bz2-1.0
+      - libssl1.0.0:i386
+      - libfreetype6:i386
+before_script: 
+  - git clone --depth=1 https://github.com/estebanlm/pharo-travis-ci.git
+script:
+  - pharo-travis-ci/run-tests.sh
+env: 
+  global: 
+    - baseline="YourBaseline"
+    - package_dir="mc"
+    - tests="YourBaseline.*"
+  matrix: 
+    - pharo_version="50"
+    - pharo_version="40"
+    - pharo_version="30"
