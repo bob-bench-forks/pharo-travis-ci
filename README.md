@@ -28,7 +28,7 @@ env:
     # MANDATORY. It will tell the script which baseline needs to load.
     - baseline="YourBaseline"
     # OPTIONAL. It indicates where to find baseline (default is "mc")
-    - package_dir="mc"
+    - packages_dir="mc"
     # OPTIONAL. Defines which tests to run (default is "YourBaseline.*")
     - tests="YourBaseline.*"
   matrix: 

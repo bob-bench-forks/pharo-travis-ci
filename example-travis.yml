@@ -17,7 +17,7 @@ script:
 env: 
   global: 
     - baseline="YourBaseline"
-    - package_dir="mc"
+    - packages_dir="mc"
     - tests="YourBaseline.*"
   matrix: 
     - pharo_version="50"
