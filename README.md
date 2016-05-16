@@ -35,6 +35,7 @@ env:
     # OPTIONAL. It determines the pharo version, same as [zeroconf](http://get.pharo.org) (default is "stable")
     - pharo_version="stable"
     - pharo_version="alpha" 		
+    - pharo_version="60"
     - pharo_version="50"
     - pharo_version="40"
     - pharo_version="30"
