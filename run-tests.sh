@@ -31,4 +31,4 @@ Metacello new
 	load.
 "
 # execute tests
-./pharo Pharo.image test --no-xterm --fail-on-failure "$tests" 2>&1
+./pharo Pharo.image test --no-xterm --fail-on-failure --junit-xml-output "$tests" 2>&1
